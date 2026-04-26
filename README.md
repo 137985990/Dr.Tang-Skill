@@ -16,6 +16,104 @@
 
 ---
 
+## 如何安装这个 Skill
+
+下面按 **Claude Code** 的常见使用方式来写。
+
+### 方式 1：安装到全局（推荐）
+
+适合：你希望这个 skill 在所有项目里都能用。
+
+```bash
+npx skills add 137985990/Dr.Tang-Skill -g -y
+```
+
+安装后，这个 skill 通常会出现在你的全局 skills 目录里（例如 `~/.claude/skills/`）。
+
+### 方式 2：安装到当前项目
+
+适合：你只想在当前项目里使用它。
+
+在项目根目录执行：
+
+```bash
+npx skills add 137985990/Dr.Tang-Skill -y
+```
+
+这样通常会把 skill 安装到当前项目的 `.claude/skills/` 目录。
+
+### 方式 3：手动安装（最稳妥的兜底方式）
+
+如果 CLI 安装后 Claude 识别不到，可以手动把这个仓库里的 `SKILL.md` 放到 Claude Code 会扫描的目录里。
+
+**全局安装目录示例：**
+
+- macOS / Linux: `~/.claude/skills/dr-tang-advisor-review/SKILL.md`
+- Windows: `%USERPROFILE%\.claude\skills\dr-tang-advisor-review\SKILL.md`
+
+**项目内安装目录示例：**
+
+- `[你的项目目录]/.claude/skills/dr-tang-advisor-review/SKILL.md`
+
+如果你手动安装，建议把本仓库里的这些文件一起保留，方便 skill 参考：
+
+- `SKILL.md`
+- `templates/`
+- `examples/`
+- `references/`
+
+### 安装后怎么确认成功
+
+你可以用下面几种方式确认：
+
+1. 运行：
+
+```bash
+npx skills list -g
+```
+
+如果是项目内安装，也可以先试：
+
+```bash
+npx skills list
+```
+
+2. 在 Claude Code 里直接问：
+
+```text
+What skills are available?
+```
+
+看是否能看到 `dr-tang-advisor-review`。
+
+3. 直接显式触发：
+
+```text
+/dr-tang-advisor-review
+```
+
+如果 slash command 能触发，说明 skill 已经被 Claude Code 识别到了。
+
+### 如果装完后 Claude 还是不用这个 skill
+
+按这个顺序检查：
+
+1. 先确认 skill 是否真的装到了 Claude Code 会扫描的目录里
+2. 如果刚创建了新的 `.claude/skills/` 目录，重启 Claude Code 一次
+3. 试着直接用：
+
+```text
+/dr-tang-advisor-review
+```
+
+4. 再用更贴近触发词的自然语言，比如：
+
+- `按唐老师的标准审一下这段话`
+- `帮我做发给导师前的最终检查`
+- `根据这些聊天记录提炼导师偏好`
+
+---
+
 ## 最快的用法（不到 2 分钟）
 
 把你要发的内容直接粘贴进来，说：
