@@ -93,11 +93,14 @@ description: |
 - [ ] 这段有没有一句核心论点？（还是只有事实罗列）
 - [ ] 段与段之间有没有被跳跃？读者能不能跟上逻辑链条？
 - [ ] 有没有把下一段才展开的对比或否定抢先写进这一段？（比如读者还不知道第二个 challenge，就先写 `not about ...`）
+- [ ] Related work 的每个 subsection 有没有清楚交代：它为什么在这里、和前后小节的关系是什么、和本文方法的关系是什么？
 - [ ] 有没有无 citation 支撑的强 claim？（"所有…都…""没有人做过…"）
 - [ ] 有没有把不同的问题混为一谈？（比如 availability ≠ degradation）
+- [ ] 核心术语是不是沿用了领域已有的标准定义？如果 `source` / `target` / `missing` 这类词是相对性的，是否已经说清比较基准？
 - [ ] 例子或术语会不会把读者注意力带偏？如果这个例子需要背景知识，是否已经解释了它为什么 relevant？
 - [ ] 批评他人 / 自身局限时，措辞是否过强？（"has a deficit" → "has room for improvement"）
 - [ ] 有没有用了不必要的生僻词或半定义术语？（比如 `closed set` 这种如果不是必要术语，就换成更普通的英文）
+- [ ] Methodology 读起来是不是像 project report：`I did this, then I did that`？如果是，是否先把 why / reasoning 讲清楚，再讲 how？
 - [ ] Introduction 第一段结尾有没有 urgency？（不是描述困难，是说明这个 gap 为什么现在必须解决）
 - [ ] Related work 里每篇引用是否用了自己的语言解释清楚了？（不是复制对方术语）
 - [ ] Related work 里每篇引用有没有说清楚与自己工作的关系？
@@ -223,6 +226,9 @@ description: |
 **P7 — 不要把下一段的对比抢先写进这一段。** 当前段先把当前问题讲清楚；像 `not about ...` 这种句子，如果读者还没被引到下一层问题，通常应该后移到下一段开头。
 > "not about 那句话放在这里不妥了... 放在下一段的起点反而更好"
 
+**P8 — Related work 的小节安排要有 guideline。** A、B、C 不是并列堆料；每个 subsection 都要让读者看得出它为什么在这里、和前后小节怎么接、和本文方法有什么关系。
+> "你从A到B到C总有一个guideline... 到C你总没有找出为什么"
+
 ---
 
 ### 【精确性与 claim 范围】
@@ -245,6 +251,9 @@ description: |
 
 **L6 — 例子和术语不能把读者注意力带偏。** 如果两个模态或两个概念之间的关系不是常识，就先解释为什么 relevant；否则读者会误以为你在讨论另一类问题。
 > "你在这里反复强调 PPG 到 ECG 反而让人眼球落到那边... 会让人产生一些无必要的思考"
+
+**L7 — 核心术语优先沿用领域标准定义；相对性词要说清比较基准。** 如果 survey 已经定义了 `source` / `target` / heterogeneous transfer，就不要自己重新发明一套更模糊的说法。像 `missing` 这种词，也要说清楚是相对谁 missing；对它自己的 setup 来说如果是完整的，就不要轻易叫 missing。
+> "你都已经找到了一本 survey paper... 它里面一定把 source 和 target 定义了"
 
 ---
 
@@ -277,8 +286,8 @@ description: |
 
 ### 【研究方法论】（来自 audio1688366793，低置信度待确认）
 
-**M1 — 方法论描述要提炼到"原则层面"。** 不能只说"做了什么"，要先说原则是什么、为什么这样设计，再说具体操作细节。
-> "你要synthesize到一个方法论的阶段...你的原则是什么，为什么，然后才说那个值是怎么calculate来的"
+**M1 — 方法论描述要先讲 reasoning，不要写成 project report。** 不能只说"做了什么"或 `I did this, then I did that`；要先说原则是什么、为什么这样设计，再说具体操作细节。
+> "你要 synthesize 到一个方法论的阶段... 你的原则是什么，为什么"
 
 **M2 — 写作中必须明确记录所有方法选择。** 包括数据采样策略。凡是做了的决定，write-up 里都要写出来，不能遗漏。
 > "那个easy hard mediocre没有在你的write up里提到，你需要提到"
