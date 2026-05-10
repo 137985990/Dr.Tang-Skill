@@ -3,8 +3,8 @@
 这个文件是唐老师审稿偏好的结构化存档，基于历次会议录音和聊天记录。
 用途：每次提炼出新规律时，在这里更新。SKILL.md 里的 Known Patterns 与本文件保持同步。
 
-**最后更新：** 2026-05-09
-**数据来源：** 40+ 次会议录音转写文本（含 audio1688366793, 录音 (42), 录音 (43)）
+**最后更新：** 2026-05-10
+**数据来源：** 40+ 次会议录音转写文本（含 audio1688366793, 录音 (42), 录音 (43), 录音 (44)）
 
 ---
 
@@ -20,6 +20,13 @@
 | P4 | Introduction 第一段末尾必须有 urgency | "你第一段的结尾就应该说 practical deployment 才是 urgent need" |
 | P5 | Related work 不是陈述问题的地方 | "问题在 introduction 里说了，related work 不要再说" |
 | P6 | Related work 里每篇引用必须用自己的话解释 | "用你的理解后的语言描述，给没有背景的人看" |
+| P7 | 设计决策的 justification 放在 methodology，不放 related work | 多次明确指出，录音 (44) 再次强调：如果只是 justify why use U-Net，应放 methodology / experiment |
+
+### 方法论表达
+
+| 编号 | 规律 | 原话 / 依据 |
+|---|---|---|
+| M1 | 方法论描述必须先讲原则和 reasoning，不能写成 project report / laundry list | 已在多次录音中重复出现；录音 (44) 再次明确批评 `I did this, then I did that` 的写法 |
 
 ### Claim 精确性
 
@@ -52,8 +59,9 @@
 | T1 | 批评他人方法要 diplomatic，但不模糊 | "has room for improvement" 而非 "has a deficit" |
 | T2 | 批评自己方法用 limitation，不用 failure | 多次出现，但部分是情境性的 |
 | L4 | 特定术语用法有严格要求 | missing modality / transform vs augment / impractical 等 |
-| P7 | 设计决策的 justification 放在 methodology，不放 related work | 两次明确指出 |
-| M1 | 方法论描述必须先讲原则和 reasoning，不能写成 project report / laundry list | 录音 (43) 再次明确：不能只是 "I did this, then I did that" |
+| L7 | 核心术语优先沿用领域标准定义；`missing` 这类相对性词必须说清比较基准 | 录音 (43)、录音 (44) 都强调：source 对其自身是完整的，不应随意说成 missing；若 survey 已有 source/target 定义，优先沿用 |
+| P8 | Related work 的各个 subsection 需要一个清楚的 guideline；不能只是并列堆料，要讲清它为什么在这里、和前后及本文方法的关系 | 录音 (43)、录音 (44) 都强调 A-B-C 需要清楚主线 |
+| L8 | 对最接近的 prior work，必须明确写出 why not direct apply；只说 application 不同不够 | 录音 (43)、录音 (44) 都强调如果不写清不同，读者会认为“别人已经做过了” |
 
 ---
 
@@ -63,14 +71,12 @@
 |---|---|---|
 | L5 | 因果链必须逐步写出，不能让读者脑补 | 单次但明确的批评 |
 | L6 | 例子或术语如果会把读者注意力带到错误问题上，就必须解释它为什么 relevant，否则宁可不用 | 录音 (42)：PPG→ECG 例子让读者误以为在讨论另一类跨模态问题 |
-| L7 | 核心术语优先沿用领域标准定义；`missing` 这类相对性词必须说清比较基准 | 录音 (43)：source 对其自身是完整的，不应随意说成 missing；若 survey 已有 source/target 定义，优先沿用 |
 | R3 | 不同意 reviewer 要直说，不要含糊回避 | 单次 |
 | R4 | 只改 reviewer 要求的内容，不主动添加 | 单次 |
 | M2 | 写作中必须明确记录所有方法/采样决策（包括数据选择策略） | audio1688366793："那个easy hard mediocre没有在你的write up里提到，你需要提到" |
 | M3 | 不能假设读者知道你数据集的内容，必须主动交代 dataset 背景 | audio1688366793："这一段是不是应该解释一下你的dataset里通常有些什么东西" |
 | M4 | 结果与预期矛盾时，解释必须真正站得住脚，不能"说了等于没说" | audio1688366793："that doesn't make sense...I don't think that explanation really justify" |
-| P8 | 不要把下一段的对比或否定抢先写进这一段；读者还没被引到第二层问题时，`not about ...` 这类句子通常应放到下一段开头 | 录音 (42)：明确指出 `not about ...` 放在当前段“不妥” |
-| P9 | Related work 的各个 subsection 需要一个清楚的 guideline；不能只是并列堆料，要讲清它为什么在这里、和前后及本文方法的关系 | 录音 (43)："你从A到B到C总有一个guideline... 到C你总没有找出为什么" |
+| P9 | 不要把下一段的对比或否定抢先写进这一段；读者还没被引到第二层问题时，`not about ...` 这类句子通常应放到下一段开头 | 录音 (42)：明确指出 `not about ...` 放在当前段“不妥” |
 | S3 | 语法错误是作者完全责任，不能找借口；发前必须清查 | audio1688366793："你take responsible，故意留的，为什么找理由" |
 | T4 | 英文优先用常用词；若 `closed set` 这类词不是必要术语，就换成更直接的表达或先定义 | 录音 (42)："`closed set` what do you mean closed set" |
 
@@ -84,6 +90,7 @@
 | 2026-04-28 | 新增 M1–M4、S3（5 条低置信度规律） | audio1688366793 录音转写 |
 | 2026-05-09 | 新增 L6、P8、T4（3 条低置信度规律） | 录音 (42) |
 | 2026-05-09 | M1 升级为中置信度；新增 L7、P9（2 条低置信度规律） | 录音 (43) |
+| 2026-05-10 | P7、M1 升级为高置信度；L7、P8 升级为中置信度；新增 L8（1 条中置信度规律） | 录音 (44) |
 
 ---
 

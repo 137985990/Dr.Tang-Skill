@@ -97,6 +97,7 @@ description: |
 - [ ] 有没有无 citation 支撑的强 claim？（"所有…都…""没有人做过…"）
 - [ ] 有没有把不同的问题混为一谈？（比如 availability ≠ degradation）
 - [ ] 核心术语是不是沿用了领域已有的标准定义？如果 `source` / `target` / `missing` 这类词是相对性的，是否已经说清比较基准？
+- [ ] 对最接近的 prior work，是否明确写出了它为什么不能直接用于本文任务？如果只是 application 不同，是否已经说明这还不够？
 - [ ] 例子或术语会不会把读者注意力带偏？如果这个例子需要背景知识，是否已经解释了它为什么 relevant？
 - [ ] 批评他人 / 自身局限时，措辞是否过强？（"has a deficit" → "has room for improvement"）
 - [ ] 有没有用了不必要的生僻词或半定义术语？（比如 `closed set` 这种如果不是必要术语，就换成更普通的英文）
@@ -255,6 +256,9 @@ description: |
 **L7 — 核心术语优先沿用领域标准定义；相对性词要说清比较基准。** 如果 survey 已经定义了 `source` / `target` / heterogeneous transfer，就不要自己重新发明一套更模糊的说法。像 `missing` 这种词，也要说清楚是相对谁 missing；对它自己的 setup 来说如果是完整的，就不要轻易叫 missing。
 > "你都已经找到了一本 survey paper... 它里面一定把 source 和 target 定义了"
 
+**L8 — 对最接近的 prior work，必须明确写出 why not direct apply。** 只说 application 不同不够；要把它依赖的监督、共享变量、模态假设或任务前提写清楚，否则读者会默认“别人已经做过了”。
+> "你一定要在这个B里面强调一下我跟他的不同... 他们不能 direct apply on the task"
+
 ---
 
 ### 【措辞与语气】
@@ -284,7 +288,7 @@ description: |
 
 ---
 
-### 【研究方法论】（来自 audio1688366793，低置信度待确认）
+### 【研究方法论】
 
 **M1 — 方法论描述要先讲 reasoning，不要写成 project report。** 不能只说"做了什么"或 `I did this, then I did that`；要先说原则是什么、为什么这样设计，再说具体操作细节。
 > "你要 synthesize 到一个方法论的阶段... 你的原则是什么，为什么"
