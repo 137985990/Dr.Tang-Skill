@@ -94,6 +94,7 @@ description: |
 - [ ] 段与段之间有没有被跳跃？读者能不能跟上逻辑链条？
 - [ ] 有没有把下一段才展开的对比或否定抢先写进这一段？（比如读者还不知道第二个 challenge，就先写 `not about ...`）
 - [ ] Related work 的每个 subsection 有没有清楚交代：它为什么在这里、和前后小节的关系是什么、和本文方法的关系是什么？
+- [ ] Related work 是不是按“类别/机制/表示层次”综合出来的，而不是按论文一篇一篇流水账地写？
 - [ ] 有没有无 citation 支撑的强 claim？（"所有…都…""没有人做过…"）
 - [ ] 有没有把不同的问题混为一谈？（比如 availability ≠ degradation）
 - [ ] 核心术语是不是沿用了领域已有的标准定义？如果 `source` / `target` / `missing` 这类词是相对性的，是否已经说清比较基准？
@@ -229,6 +230,9 @@ description: |
 
 **P8 — Related work 的小节安排要有 guideline。** A、B、C 不是并列堆料；每个 subsection 都要让读者看得出它为什么在这里、和前后小节怎么接、和本文方法有什么关系。
 > "你从A到B到C总有一个guideline... 到C你总没有找出为什么"
+
+**P10 — Related work 优先按类别综合，不按论文流水账展开。** 先说这一类工作在做什么、解决到哪一层（raw signal / feature / transfer setting），再用一两篇代表论文举例；不要变成 `paper A did this, paper B did that` 的堆砌。
+> "你能不能找到规律... 主要是干什么，然后这样的方法可以参见..."
 
 ---
 
