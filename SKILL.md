@@ -95,6 +95,7 @@ description: |
 - [ ] 有没有把下一段才展开的对比或否定抢先写进这一段？（比如读者还不知道第二个 challenge，就先写 `not about ...`）
 - [ ] Related work 的每个 subsection 有没有清楚交代：它为什么在这里、和前后小节的关系是什么、和本文方法的关系是什么？
 - [ ] Related work 是不是按“类别/机制/表示层次”综合出来的，而不是按论文一篇一篇流水账地写？
+- [ ] 如果把多篇文章归为一类，是否既讲清了它们的共同 procedure，也讲清了代表方法之间真正不同的地方？
 - [ ] 有没有无 citation 支撑的强 claim？（"所有…都…""没有人做过…"）
 - [ ] 有没有把不同的问题混为一谈？（比如 availability ≠ degradation）
 - [ ] 核心术语是不是沿用了领域已有的标准定义？如果 `source` / `target` / `missing` 这类词是相对性的，是否已经说清比较基准？
@@ -102,6 +103,7 @@ description: |
 - [ ] 例子或术语会不会把读者注意力带偏？如果这个例子需要背景知识，是否已经解释了它为什么 relevant？
 - [ ] 批评他人 / 自身局限时，措辞是否过强？（"has a deficit" → "has room for improvement"）
 - [ ] 有没有用了不必要的生僻词或半定义术语？（比如 `closed set` 这种如果不是必要术语，就换成更普通的英文）
+- [ ] 缩写、protocol label 或内部术语是不是在第一次出现时就讲清楚了？如果 `CSDI`、`window-level protocol`、`complete-channel setting` 不是读者公认会懂的词，就先写全称或改成白话。
 - [ ] Methodology 读起来是不是像 project report：`I did this, then I did that`？如果是，是否先把 why / reasoning 讲清楚，再讲 how？
 - [ ] Introduction 第一段结尾有没有 urgency？（不是描述困难，是说明这个 gap 为什么现在必须解决）
 - [ ] Related work 里每篇引用是否用了自己的语言解释清楚了？（不是复制对方术语）
@@ -231,7 +233,7 @@ description: |
 **P8 — Related work 的小节安排要有 guideline。** A、B、C 不是并列堆料；每个 subsection 都要让读者看得出它为什么在这里、和前后小节怎么接、和本文方法有什么关系。
 > "你从A到B到C总有一个guideline... 到C你总没有找出为什么"
 
-**P10 — Related work 优先按类别综合，不按论文流水账展开。** 先说这一类工作在做什么、解决到哪一层（raw signal / feature / transfer setting），再用一两篇代表论文举例；不要变成 `paper A did this, paper B did that` 的堆砌。
+**P10 — Related work 优先按类别综合，不按论文流水账展开。** 先说这一类工作在做什么、解决到哪一层（raw signal / feature / transfer setting），再用一两篇代表论文举例；如果这些文章共享一个 common procedure，就把共性说清，再点出代表方法之间真正不同的地方。不要变成 `paper A did this, paper B did that` 的堆砌。
 > "你能不能找到规律... 主要是干什么，然后这样的方法可以参见..."
 
 ---
@@ -277,6 +279,9 @@ description: |
 
 **T4 — 英文优先用常用词。** 不是必要术语的词不要故作高级；像 `closed set` 这种如果读者会停下来想，就换成更直接的说法或先定义。
 > "`closed set` what do you mean closed set"
+
+**T5 — 缩写、protocol label 和技术短语必须首现解释。** 如果缩写或标签不是领域里公认的常识，就不要直接丢给读者；先写全称，或用一句白话说明它到底指什么。
+> "`CSDI` 是不是应该先写全称... `pooled window-level protocol` / `complete channel setting` 我也不一定懂"
 
 ---
 
