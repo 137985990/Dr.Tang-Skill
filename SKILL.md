@@ -103,7 +103,8 @@ description: |
 - [ ] 例子或术语会不会把读者注意力带偏？如果这个例子需要背景知识，是否已经解释了它为什么 relevant？
 - [ ] 批评他人 / 自身局限时，措辞是否过强？（"has a deficit" → "has room for improvement"）
 - [ ] 有没有用了不必要的生僻词或半定义术语？（比如 `closed set` 这种如果不是必要术语，就换成更普通的英文）
-- [ ] 缩写、protocol label 或内部术语是不是在第一次出现时就讲清楚了？如果 `CSDI`、`window-level protocol`、`complete-channel setting` 不是读者公认会懂的词，就先写全称或改成白话。
+- [ ] 缩写、protocol label、符号和自定义对象是不是在第一次出现时就讲清楚了？如果 `CSDI`、`window-level protocol`、`T/C`、`node`、`availability mask` 不是读者公认会懂的词，就先写全称、举例或改成白话。
+- [ ] 如果一句话是 AI / ChatGPT 打磨出来的，你自己能不能不用原词把它讲清楚？如果作者自己都讲不明白，就必须重写。
 - [ ] Methodology 读起来是不是像 project report：`I did this, then I did that`？如果是，是否先把 why / reasoning 讲清楚，再讲 how？
 - [ ] Introduction 第一段结尾有没有 urgency？（不是描述困难，是说明这个 gap 为什么现在必须解决）
 - [ ] Related work 里每篇引用是否用了自己的语言解释清楚了？（不是复制对方术语）
@@ -280,8 +281,11 @@ description: |
 **T4 — 英文优先用常用词。** 不是必要术语的词不要故作高级；像 `closed set` 这种如果读者会停下来想，就换成更直接的说法或先定义。
 > "`closed set` what do you mean closed set"
 
-**T5 — 缩写、protocol label 和技术短语必须首现解释。** 如果缩写或标签不是领域里公认的常识，就不要直接丢给读者；先写全称，或用一句白话说明它到底指什么。
+**T5 — 缩写、protocol label、符号和自定义对象必须首现解释。** 如果缩写、标签、记号或 graph/object 定义不是领域里公认的常识，就不要直接丢给读者；先写全称、定义它的粒度，必要时给一个小例子。
 > "`CSDI` 是不是应该先写全称... `pooled window-level protocol` / `complete channel setting` 我也不一定懂"
+
+**T6 — AI 打磨过的句子，如果作者自己都讲不明白，就不能留。** 不是 ChatGPT 觉得通顺就够了；作者必须能用自己的话解释这句话在说什么，否则就继续改到自己真正懂为止。
+> "chat 和 gpt 很懂但我不懂... 你要想想它帮你写的东西你懂不懂"
 
 ---
 
