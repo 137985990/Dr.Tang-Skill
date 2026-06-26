@@ -99,6 +99,7 @@ description: |
 - [ ] 有没有无 citation 支撑的强 claim？（"所有…都…""没有人做过…"）
 - [ ] 有没有把不同的问题混为一谈？（比如 availability ≠ degradation）
 - [ ] 核心术语是不是沿用了领域已有的标准定义？如果 `source` / `target` / `missing` 这类词是相对性的，是否已经说清比较基准？
+- [ ] 同一个技术概念是不是前后换了几个近义词？如果是，是否统一回领域常用、读者一眼能懂的那个术语？
 - [ ] 对最接近的 prior work，是否明确写出了它为什么不能直接用于本文任务？如果只是 application 不同，是否已经说明这还不够？
 - [ ] 例子或术语会不会把读者注意力带偏？如果这个例子需要背景知识，是否已经解释了它为什么 relevant？
 - [ ] 批评他人 / 自身局限时，措辞是否过强？（"has a deficit" → "has room for improvement"）
@@ -106,10 +107,12 @@ description: |
 - [ ] 缩写、protocol label、符号和自定义对象是不是在第一次出现时就讲清楚了？如果 `CSDI`、`window-level protocol`、`T/C`、`node`、`availability mask` 不是读者公认会懂的词，就先写全称、举例或改成白话。
 - [ ] 如果一句话是 AI / ChatGPT 打磨出来的，你自己能不能不用原词把它讲清楚？如果作者自己都讲不明白，就必须重写。
 - [ ] Methodology 读起来是不是像 project report：`I did this, then I did that`？如果是，是否先把 why / reasoning 讲清楚，再讲 how？
+- [ ] 方法部分是不是把 preprocessing / normalization / split / windowing / stopping 这些步骤按真实执行顺序写清楚了？关键数值、范围和为什么这么做，读者能不能直接跟下来？
 - [ ] Introduction 第一段结尾有没有 urgency？（不是描述困难，是说明这个 gap 为什么现在必须解决）
 - [ ] Related work 里每篇引用是否用了自己的语言解释清楚了？（不是复制对方术语）
 - [ ] Related work 里每篇引用有没有说清楚与自己工作的关系？
 - [ ] 如果是 reviewer response：每条都回应了吗？感谢语是否只在末尾出现一次？
+- [ ] 如果是 reviewer response：你是不是先搞清 reviewer 真在问什么、你自己真实做了什么、改在什么位置，然后再去组织语言？还是把 comment 直接丢给 AI 生成了一个看起来像回答的段落？
 
 **输出格式（结论优先）：**
 
@@ -260,7 +263,7 @@ description: |
 **L6 — 例子和术语不能把读者注意力带偏。** 如果两个模态或两个概念之间的关系不是常识，就先解释为什么 relevant；否则读者会误以为你在讨论另一类问题。
 > "你在这里反复强调 PPG 到 ECG 反而让人眼球落到那边... 会让人产生一些无必要的思考"
 
-**L7 — 核心术语优先沿用领域标准定义；相对性词要说清比较基准。** 如果 survey 已经定义了 `source` / `target` / heterogeneous transfer，就不要自己重新发明一套更模糊的说法。像 `missing` 这种词，也要说清楚是相对谁 missing；对它自己的 setup 来说如果是完整的，就不要轻易叫 missing。
+**L7 — 核心术语优先沿用领域标准定义，并在全文保持一致；相对性词要说清比较基准。** 如果 survey 已经定义了 `source` / `target` / heterogeneous transfer，就不要自己重新发明一套更模糊的说法。像 `missing` 这种词，也要说清楚是相对谁 missing；对它自己的 setup 来说如果是完整的，就不要轻易叫 missing。像 `generation` / `translation`、`signal` / `channel` 这种技术词，也不要为了换个说法就改成别的词。
 > "你都已经找到了一本 survey paper... 它里面一定把 source 和 target 定义了"
 
 **L8 — 对最接近的 prior work，必须明确写出 why not direct apply。** 只说 application 不同不够；要把它依赖的监督、共享变量、模态假设或任务前提写清楚，否则读者会默认“别人已经做过了”。
@@ -278,10 +281,10 @@ description: |
 **T3 — 重心比对错更重要。** 句子可以都不错，但重心放错，照样被批。
 > "没有 delivered 错，你的重心 delivered 错"
 
-**T4 — 英文优先用常用词。** 不是必要术语的词不要故作高级；像 `closed set` 这种如果读者会停下来想，就换成更直接的说法或先定义。
+**T4 — 英文优先用常用词，技术概念不要为了显得高级就乱换词。** 不是必要术语的词不要故作高级；像 `closed set` 这种如果读者会停下来想，就换成更直接的说法或先定义。已经有稳定含义的技术词，不要随手换成 `model level`、`instantiation`、`translation` 这类读者未必按你想的方式理解的词。
 > "`closed set` what do you mean closed set"
 
-**T5 — 缩写、protocol label、符号和自定义对象必须首现解释。** 如果缩写、标签、记号或 graph/object 定义不是领域里公认的常识，就不要直接丢给读者；先写全称、定义它的粒度，必要时给一个小例子。
+**T5 — 缩写、protocol label、符号、上下标、运算符和自定义对象必须首现解释。** 如果缩写、标签、记号或 graph/object 定义不是领域里公认的常识，就不要直接丢给读者；先写全称、定义它的粒度，必要时给一个小例子。读者不应该需要猜 `l`、`m`、`tr`、`\circ`、`BN`、`Jacobian` 这种符号到底是什么意思。
 > "`CSDI` 是不是应该先写全称... `pooled window-level protocol` / `complete channel setting` 我也不一定懂"
 
 **T6 — AI 打磨过的句子，如果作者自己都讲不明白，就不能留。** 不是 ChatGPT 觉得通顺就够了；作者必须能用自己的话解释这句话在说什么，否则就继续改到自己真正懂为止。
@@ -297,7 +300,9 @@ description: |
 
 **R3 — 不同意就直说，给出理由。** 含糊回避比直接说"我们不同意，因为…"更差。
 
-**R4 — 只改被要求的内容。** 主动添加其他改动可能引入新问题。
+**R4 — 只改真正服务于 reviewer comment 的内容。** 主动添加其他改动、额外表项或旁枝细节，可能会把原来简单的问题答得更乱。
+
+**R5 — Reviewer response 先由作者确定事实答案和修改位置，再让 AI 帮忙润色。** 不能把 comment 和稿子直接丢给 AI 生成一段“像回答”的文字；先想清楚 reviewer 真在问什么、你实际做了什么、改在了哪里，再组织语言。
 
 ---
 
@@ -306,7 +311,7 @@ description: |
 **M1 — 方法论描述要先讲 reasoning，不要写成 project report。** 不能只说"做了什么"或 `I did this, then I did that`；要先说原则是什么、为什么这样设计，再说具体操作细节。
 > "你要 synthesize 到一个方法论的阶段... 你的原则是什么，为什么"
 
-**M2 — 写作中必须明确记录所有方法选择。** 包括数据采样策略。凡是做了的决定，write-up 里都要写出来，不能遗漏。
+**M2 — 写作中必须明确记录所有方法选择、执行顺序和关键数值。** 包括数据采样策略。凡是做了的决定，write-up 里都要写出来，不能遗漏。像 preprocessing、normalization、split、windowing、stopping 这些步骤，不仅要写“做了”，还要写清楚先后顺序、范围/阈值和为什么这样做。
 > "那个easy hard mediocre没有在你的write up里提到，你需要提到"
 
 **M3 — 不能假设读者知道你数据集的内容。** 必须主动交代数据集背景，不能让读者自己猜。
