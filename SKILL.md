@@ -209,6 +209,8 @@ description: |
 
 基于 40+ 次会议录音，每条均出现在多次不同场合。没有提供聊天记录时，直接用这部分审稿。完整解析见 `references/advisor-patterns-distilled.md`。
 
+**U-GAT / fatigue imputation manuscript:** 如果草稿涉及 U-GAT、fatigue detection、mask-conditioned temporal imputation、aligned windows、Table IV / Label-guided、auxiliary classification feedback，先读取 `references/ugat-manuscript-rules.md`，把其中规则作为项目特定约束；不要把这些项目特例自动推广到其他论文。
+
 ---
 
 ### 【逻辑与结构】
