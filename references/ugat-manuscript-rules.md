@@ -61,6 +61,28 @@ For U-GAT-style text, keep these anchors stable:
 
 When graph attention is mentioned, state the mechanism cleanly: graph attention models temporal relations among window time steps; cross-domain modality handling comes from the aligned representation and availability mask, not from treating sensors as graph nodes.
 
+## Sentence-Level Style From Advisor Comments
+
+These comments came up repeatedly in the annotated manuscript and should be treated as stable writing preferences for this project:
+
+- Prefer plain, common English. If a phrase reads like a literal translation, rewrite it.
+- Do not use too many `sensors` when the real concept is modality-level or setup-level; choose the simplest accurate word.
+- Avoid awkward quoting around ordinary words such as `recorded` unless the quote marks carry meaning.
+- If a term sounds vague or imported from elsewhere, explain it immediately. Examples from the comments include `sensor layout difference`, `operator`, and corpus-style wording.
+- Do not introduce a technical noun without showing what it means in this paper. If the reader would ask "what is this?", define it in the same sentence or the next one.
+- If a sentence is doing too many jobs at once, split it. One sentence should not carry setup, claim, and conclusion all together.
+- If the paragraph ends without a clear takeaway, add one. The last sentence should tell the reader what the section established or why the next section follows.
+- If a previous sentence is inaccurate or too weak, fix that earlier sentence as well; do not only patch the current line.
+- When the text uses a graph or operator term, state the exact operation if it matters. Do not leave `operator` or similar labels floating without saying whether it is a dot product, similarity, or something else.
+
+Common rewrite triggers:
+
+- `too many sensors` -> reduce to the minimum necessary term.
+- `need modification --does not read smoothly` -> simplify and rewrite in ordinary English.
+- `what is sensor layout difference` -> define the comparison before naming it.
+- `operator?` -> name the operator explicitly.
+
+
 ## Experiment Protocol Anchors
 
 Claims must match the implemented protocol:
@@ -113,3 +135,5 @@ When asked to revise the manuscript, especially after advisor edits:
 | Saying the graph models sensor/channel relations | Say graph nodes are time steps; channel handling happens through aligned columns and masks. |
 | Claiming broad robustness from fixed-seed checks | Call it fixed-seed sensitivity or state the limitation. |
 | Letting table labels imply a different protocol | Clarify the surrounding text without changing table data unless the user explicitly approves. |
+| Writing with too many rare or translated-sounding words | Replace them with ordinary, direct English and define any unavoidable technical term. |
+| Ending a paragraph without a takeaway | Add a final sentence that closes the point and connects to the next section. |
