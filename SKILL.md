@@ -5,7 +5,7 @@ description: Use when planning, drafting, revising, or reviewing an academic pap
 
 # Tang Paper Guidance
 
-这个 skill 专门指导论文，不负责普通邮件仿写。它把唐老师的论文指导方式变成可执行的判断：先设计读者需要逐步知道什么，再选择英文表达。完整规则见 [paper-guidance-core.md](references/paper-guidance-core.md)；证据边界见 [tang-evidence-map.md](references/tang-evidence-map.md)；回复 reviewer 见 [reviewer-response.md](references/reviewer-response.md)。
+这个 skill 专门指导论文，不负责邮件仿写。Tang 的日常邮件只作为语言观察语料，用来提炼她的说话节奏、用词、句法和判断表达；不把邮件格式、错误或单封句型直接移植到论文。完整规则见 [paper-guidance-core.md](references/paper-guidance-core.md)；邮件语言观察见 [email-style-observations.md](references/email-style-observations.md)；证据边界见 [tang-evidence-map.md](references/tang-evidence-map.md)；回复 reviewer 见 [reviewer-response.md](references/reviewer-response.md)。
 
 ## 路由
 
@@ -21,6 +21,6 @@ description: Use when planning, drafting, revising, or reviewing an academic pap
 3. 每段交付一个可复述的中心判断；原因、例子、证据和限定可以共同服务它。必要性在引言前部形成即可，首段末没有 urgency 不单独阻断。
 4. Related Work 按类别/机制/条件综合，说明与本文的 overlap 和 why-not-direct-apply；不要逐篇流水账或重复整套动机。
 5. 方法先讲原则和 reasoning，再讲组件、顺序、假设、数据和参数。每个贡献必须能在方法、分析或评价中找到落点。
-6. 使用规范英文。保留她观察到的短句、清楚主语、稳定术语和真实连接关系；不复制邮件中的语法错误，不强行塞 `However`、`Therefore` 或固定短语。
+6. 使用规范英文。保留她在邮件中表现出的短句、清楚主语、稳定术语和真实连接关系；邮件只提供语言观察，不用于仿写，不复制邮件语法错误，不强行塞 `However`、`Therefore` 或固定短语。
 
-用户明确指定“按唐老师的论文指导”时，优先使用本 skill；需要邮件口吻、作者画像或邮箱证据时回到 `dr-tang-advisor-review`。
+用户明确指定“按唐老师的论文指导”时，优先使用本 skill；需要从邮件提炼语言观察或查作者归属时读取对应参考，但不要切换成邮件仿写。普通邮件仿写不属于本 skill。

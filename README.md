@@ -2,7 +2,7 @@
 
 A focused paper-writing skill based on Prof. Ying (Gina) Tang’s observed guidance from paper feedback, emails, document comments, recordings, and supervised 2024–2026 research manuscripts.
 
-It guides research questions, Introduction, Related Work, Method, Experiments, contributions, terminology, claims, and reviewer responses. It keeps direct text evidence separate from supervision, authorship signals, and team-adopted structure.
+It guides research questions, Introduction, Related Work, Method, Experiments, contributions, terminology, claims, and reviewer responses. Tang’s ordinary emails are used only as evidence for her wording, sentence rhythm, and judgment expressions; this skill does not draft or imitate emails. It keeps direct text evidence separate from supervision, authorship signals, and team-adopted structure.
 
 ## Files
 

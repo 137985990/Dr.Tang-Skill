@@ -1,5 +1,7 @@
 # 唐老师论文指导证据地图
 
+邮件的角色是语言观察语料，不是邮件仿写模板。具体用词、句法和说话节奏见 [email-style-observations.md](email-style-observations.md)。
+
 ## 核心结构样本
 
 - **U1 疲劳跨域模态补全稿**：四个实质 Introduction 段加三条贡献；实际需要 → 既有模态补全能力 → accessibility gap → 共享模态的机制直觉 → proof-of-concept 与验证。来源：`tang-led-introductions-20261017/two-paper-local-evidence.md`、U1 校样和 E42/E45。
