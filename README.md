@@ -1,14 +1,15 @@
 # Tang Paper Guidance
 
-A focused paper-writing skill based on Prof. Ying (Gina) Tang’s observed guidance from paper feedback, emails, document comments, recordings, and supervised 2024–2026 research manuscripts.
+依据唐老师可定位的指导、本人改写和批注，以及两篇用户确认全程监督的论文，帮助作者发现并修正具体的理解断点。
 
-It guides research questions, Introduction, Related Work, Method, Experiments, contributions, terminology, claims, and reviewer responses. Tang’s ordinary emails are used only as evidence for her wording, sentence rhythm, and judgment expressions; this skill does not draft or imitate emails. It keeps direct text evidence separate from supervision, authorship signals, and team-adopted structure.
+核心是她怎样读：先复述作者真正想说的事，追踪一个词让读者期待什么，拆开被混合的因果，再检查方法是否接住问题。提供带上下文的措辞与改句示范，不把论文固定成八段，也不以常见连接词充当个人风格。
 
-## Files
+邮件只用于提炼表达与判断习惯，不提供邮件仿写。练习改稿与真实短引有明确区分；公开包不包含私人邮件、附件原件或完整录音转写。
 
-- `SKILL.md` — routing and non-negotiable decisions.
-- `references/paper-guidance-core.md` — research logic, section workflows, language and claim checks.
-- `references/reviewer-response.md` — evidence-based reviewer-response workflow.
-- `references/tang-evidence-map.md` — source boundaries and reusable Tang guidance.
+- `SKILL.md`：入口与交付方式。
+- `references/reading-and-intervention.md`：七类具体干预及修稿示范。
+- `references/wording-decisions.md`：亲笔措辞、句法、问题表达与技术词的使用条件。
+- `references/supervised-introductions.md`：疲劳稿与 AIGC 综述的实际论证路径。
+- `references/source-notes.md`：各来源的定位、版本和适用范围。
 
-Use the skill when the task is academic paper planning, drafting, revision, or review. For ordinary email voice, use the separate email/advisor skill.
+例如：“按唐老师指导论文的方式审这两段，先找读者会误解哪一步，再给出可用改稿。”也可以只要求英文正文，skill 不会强制附审稿清单。

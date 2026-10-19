@@ -1,26 +1,38 @@
 ---
 name: tang-paper-guidance
-description: Use when planning, drafting, revising, or reviewing an academic paper according to Prof. Ying (Gina) Tang’s observed guidance on research logic, paragraph transitions, literature synthesis, terminology, evidence, and reviewer responses.
+description: Use when the user asks for Prof. Ying (Gina) Tang's paper guidance, tangskill, or 唐老师的论文写法, including diagnosing a draft, rebuilding an introduction, comparing related methods, or revising academic wording from her observed feedback.
 ---
 
-# Tang Paper Guidance
+# 唐老师的论文指导与措辞
 
-这个 skill 专门指导论文，不负责邮件仿写。Tang 的日常邮件只作为语言观察语料，用来提炼她的说话节奏、用词、句法和判断表达；不把邮件格式、错误或单封句型直接移植到论文。完整规则见 [paper-guidance-core.md](references/paper-guidance-core.md)；邮件语言观察见 [email-style-observations.md](references/email-style-observations.md)；证据边界见 [tang-evidence-map.md](references/tang-evidence-map.md)；回复 reviewer 见 [reviewer-response.md](references/reviewer-response.md)。
+复现她已观察到的修稿动作：从读者读到的意思出发，追问作者究竟要说明什么，把混在一起的条件和因果拆开，再让方法与措辞准确承接。邮件用于提炼表达与判断习惯；本 skill 不提供邮件仿写。
 
-## 路由
+## 先解决让读者读不下去的那一处
 
-- **构思/搭框架**：先判断文章类型、研究事实和未知量，输出“段落功能—支撑—下一段入口”表；不编造实验、结果或文献。
-- **只要正文**：内部完成同一逻辑检查，直接交付规范英文，不附无关的审稿报告。
-- **重组/润色**：先说明每段中心判断、证据和递进，再改写；保留作者真实意图和 claim 范围。
-- **审稿/Reviewer response**：读取对应参考，逐条核对问题、事实答案、修改位置和证据；只把真正阻断项列为必须改。
+审阅或改写草稿时，先读 [具体干预与示范](references/reading-and-intervention.md)。不要从一张全面检查表开始。
 
-## 不可绕过的判断
+1. **复述意思。** 找到最早失去主线的位置。用一句普通中文说明“这里本来想让读者明白什么”，再看现有文字实际上让读者理解成什么。意思已清楚就直接改；确有两种读法才问作者。
+2. **沿着词追到承诺。** 写了 annotation、missing、robust、collaborative 等词，读者会等着后文解释或验证什么？指出具体的预期与实际工作之间的偏差，而不只是标“术语不准”。
+3. **补缺的那一步。** 成本导致数量少，还是噪声导致质量差？旧法在什么条件下有效，本任务改变了哪个条件？当前方法如何处理这个变化？先把缺失的关系写出来，再决定句子顺序和连接词。
+4. **给可执行的改法。** 对已知事实直接重排、收窄或改句；对未知事实，问会改变写法的那个问题。缺证据时交付可以成立的部分，并清楚标出暂不能成立的推论。
 
-1. 先分原创研究、综述、提案或修回稿；不要把所有文章套成八段。
-2. 先分直接文本证据与强参与信号。第一作者、通讯作者或全程监督可以指导结构研究，不能自动证明逐词亲笔。
-3. 每段交付一个可复述的中心判断；原因、例子、证据和限定可以共同服务它。必要性在引言前部形成即可，首段末没有 urgency 不单独阻断。
-4. Related Work 按类别/机制/条件综合，说明与本文的 overlap 和 why-not-direct-apply；不要逐篇流水账或重复整套动机。
-5. 方法先讲原则和 reasoning，再讲组件、顺序、假设、数据和参数。每个贡献必须能在方法、分析或评价中找到落点。
-6. 使用规范英文。保留她在邮件中表现出的短句、清楚主语、稳定术语和真实连接关系；邮件只提供语言观察，不用于仿写，不复制邮件语法错误，不强行塞 `However`、`Therefore` 或固定短语。
+反馈应让作者看见自己的跳步。例如：
 
-用户明确指定“按唐老师的论文指导”时，优先使用本 skill；需要从邮件提炼语言观察或查作者归属时读取对应参考，但不要切换成邮件仿写。普通邮件仿写不属于本 skill。
+> 这里写“标注贵”，读者会以为你后面要降低标注成本。但你的框架处理的是目标场景没有 EEG。先把这个部署条件讲出来；如果标注成本没有参与论证，这一句可以删掉。
+
+这是依材料构造的示范，不是唐老师原话。新写的反馈也用自己的表述，不伪造她的引语或替她作技术判决。
+
+## 按正在做的任务读材料
+
+- **搭建、重组 Introduction 或综述**：读 [两篇全程监督稿怎样组织引言](references/supervised-introductions.md)。用本稿的实际问题决定起点、解释量和段数；“八股文”在已有录音语境中是复用学会的写作习惯。
+- **英文改句、用词、语气**：读 [措辞如何改变意思](references/wording-decisions.md)。保留关键名词、具体动作和成立条件。她的短句要求服务读者理解；她亲改的新闻段也有因补足意思而变长的例子。
+- **Related Work、Method、实验或回复审稿人**：从“读者具体缺了哪一步”切入，使用干预示范中的方法比较、示例、假设与证据动作。不要自动要求增加算法、实验或章节。
+- **新增来源、解释依据或判断亲笔程度**：读 [来源与适用范围](references/source-notes.md)。正文修稿通常无需展示整套来源审计。
+
+## 交付随任务变化
+
+审稿时先解释最影响理解或结论的具体问题，接着给修改位置与可用改稿；其余意见按影响补充。引用触发问题的原句或关键词，使作者能定位。无需固定红黄绿评级、固定数量或每项都反问。
+
+构思时先帮助作者讲清楚“读者为何需要这项工作、已有路径到哪里为止、本文多做哪一步”；事实够用时写出提纲或正文。事实不足时给有条件的结构，不能替作者补造能力、文献结论和实验结果。
+
+用户只要正文，就内部完成这些判断，只交付正文。精简时保留必要的理由和条件；不要为了显得像她而插固定口头禅。采用规范英语，既不复制快速邮件的语法错误，也不把一般语法规范声称为她的个人偏好。
